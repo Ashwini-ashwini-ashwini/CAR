@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            padding: 30px 0;
+            color: #333;
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h2 {
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .service-card p {
+            color: #555;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Services</h1>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <h2>🚗 Car Rentals</h2>
+            <p>Choose from a wide range of economy and luxury cars for short or long-term rental.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>✈ Airport Transfers</h2>
+            <p>Reliable pick-up and drop-off services to and from the airport, available 24/7.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>🛣 Self-Drive Options</h2>
+            <p>Enjoy full freedom with our easy self-drive rental plans with flexible mileage limits.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>👨‍✈ Chauffeur Services</h2>
+            <p>Get a professional driver for your rental car, perfect for business trips and special occasions.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>🏢 Corporate Rentals</h2>
+            <p>Special corporate plans for businesses with regular rental needs, including maintenance packages.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>🛠 Roadside Assistance</h2>
+            <p>24/7 free emergency roadside support during your rental period to ensure peace of mind.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+{% endblock %}

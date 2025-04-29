@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        margin: 0;
+        padding: 40px;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #fceabb, #f8b500);
+    }
+
+    #a1 {
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        max-width: 700px;
+        margin: auto;
+        overflow: hidden;
+        padding: 25px;
+    }
+
+    #a1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    #a2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    #a3 {
+        font-size: 18px;
+        font-weight: 500;
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    #a4, #a5 {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555555;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    #a4::before {
+        content: "🧂 Ingredients:\A";
+        white-space: pre;
+        font-weight: 600;
+        color: #2c3e50;
+    }
+
+    #a5::before {
+        content: "📋 Instructions:\A";
+        white-space: pre;
+        font-weight: 600;
+        color: #2c3e50;
+    }
+</style>
+
+<div id="a1">
+   
+        
+        <img src="{{ cars.image }}" alt="">
+        <div class="a2">MAKE: {{ cars.make }}</div>
+        <div class="a3">MODEL: {{ cars.model }}</div>
+        <div class="a3">YEAR: {{ cars.year }}</div>
+        <div class="a3">TYPE: {{ cars.type }}</div>
+        <div class="a3">PRICE /day: {{ cars.price_per_day }}</div>
+        <div class="a3">LOCATION: {{ cars.location }}</div>
+        <div class="a3">AVAILABLE: {{ cars.available }}</div>
+   
+</div>
+
+{% endblock%}
